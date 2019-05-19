@@ -198,3 +198,23 @@ expected result
 ```txt
 Apple; Banana; Coconut
 ```
+
+## Combined exercise
+
+Input
+
+```xml
+<data herkunft="koboldtopf" id="EXAMPLE-DOC-ID" typ="ABC,DEF" sprache="de-DE" regenbogen="gross"><other-tag>A</other-tag>
+```
+
+Extract `id` and `sprache` with the format `id:sprache`
+
+`echo '<data herkunft="koboldtopf" id="EXAMPLE-DOC-ID" typ="ABC,DEF" sprache="de-DE" regenbogen="gross"><other-tag>A</other-tag>' | YOUR_PART_OF_THE_SOLUTION>`
+
+expected output
+
+```txt
+EXAMPLE-DOC-ID:de-DE
+```
+
+***DO NOT* rely on position of the tag or the content, it may change.**
