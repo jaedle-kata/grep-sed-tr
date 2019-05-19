@@ -115,6 +115,8 @@ Expectd Result
 
 ### Grep only matching part of string
 
+Input `I had two beers for $12 and a steak for $35`
+
 ```sh
 echo 'I spent $120 on the weekend' | grep <YOUR_PART_OF_THE_SOLUTION>
 ```
@@ -129,7 +131,7 @@ $120
 
 ## Replace name in string with another name
 
-Replace `Hans` with `Dieter`
+Replace `Hans` with `Dieter` in `I had a meeting with Hans`
 
 ```sh
 echo 'I had a meeting with Hans' | sed <YOUR_PART_OF_THE_SOLUTION>
@@ -143,7 +145,7 @@ I had a meeting with Dieter
 
 ## Replace each number in string
 
-Replace each digit `0-9` with a `#`
+Replace each digit `0-9` with a `#` in `I had two beers for $12 and a steak for $35`
 
 ```sh
 echo 'I had two beers for $12 and a steak for $35' | sed <YOUR_PART_OF_THE_SOLUTION>
@@ -153,4 +155,46 @@ Expected output
 
 ```txt
 I had two beers for $## and a steak for $##
+```
+
+## tr
+
+### Delete a character from string
+
+Input
+
+```txt
+Apple, Banana, Coconut
+```
+
+Delete the comma from the input.
+
+```sh
+echo 'Apple, Banana, Coconut' | tr <YOUR_PART_OF_THE_SOLUTION>
+```
+
+expected result
+
+```txt
+Apple Banana Coconut
+```
+
+### Replace a character with another
+
+Input 
+
+```txt
+Apple, Banana, Coconut
+```
+
+Replace the comma from the input with a semicolon.
+
+```sh
+echo 'Apple, Banana, Coconut' | tr <YOUR_PART_OF_THE_SOLUTION>
+```
+
+expected result
+
+```txt
+Apple; Banana; Coconut
 ```
